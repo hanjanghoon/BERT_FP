@@ -1,36 +1,22 @@
 Fine-grained Post-training for Multi-turn Response Selection <img src="https://pytorch.org/assets/images/logo-dark.svg" width = "90" align=center />
 ====================================
 
-Implements the model described in the following paper [Do Response Selection Models Really Know What's Next? Utterance Manipulation Strategies for Multi-turn Response Selection].
+Implements the model described in the following paper [Fine-grained Post-training for Improving Retrieval-based Dialogue Systems] in NAACL-2021.
 
 ```
 ```
-
-This code is reimplemented as a fork of [huggingface/transformers][1] and [taesunwhang/BERT-ResSel][1].
+This code is reimplemented as a fork of [huggingface/transformers][1].
 
 ![alt text](ums_overview.png)
 
 Setup and Dependencies
 ----------------------
 
-This code is implemented using PyTorch v1.6.0, and provides out of the box support with CUDA 10.1 and CuDNN 7.6.5.
-
-Anaconda / Miniconda is the recommended to set up this codebase.
-
-### Anaconda or Miniconda
-
-Clone this repository and create an environment:
-
-```shell
-git clone https://www.github.com/taesunwhang/UMS-ResSel
-conda create -n ums_ressel python=3.7
-
-# activate the environment and install all dependencies
-conda activate ums_ressel
-cd UMS-ResSel
+This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.2
+Anaconda is the recommended to set up this codebase.
 
 # https://pytorch.org
-pip install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 pip install -r requirements.txt
 ```
 
@@ -40,12 +26,10 @@ Preparing Data and Checkpoints
 
 ### Pre- and Post-trained Checkpoints
 
-We provide following pre- and post-trained checkpoints. 
+We provide following post-trained and fine-tuned checkpoints. 
 
-- [bert-base (english)][1], [bert-base-wwm (chinese)][6]
-- bert-post (ubuntu, douban, e-commerce)
-- [electra-base (english)][1], [electra-base (chinese)][7]
-- electra-post (ubuntu, douban, e-commerce)
+- [fine-grained post-trained checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][1]
+- [fine-tuned checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][1]
 
 ```shell
 sh scripts/download_pretrained_checkpoints.sh
