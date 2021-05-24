@@ -52,7 +52,7 @@ parser.add_argument("--do_lower_case", action='store_true', default=True,
                     help="Set this flag if you are using an uncased model.")
 args = parser.parse_args()
 args.save_path += args.task + '.' + "0.pt"
-args.score_file_path = args.task+ '_' +  args.score_file_path
+args.score_file_path = args.score_file_path
 # load bert
 
 
