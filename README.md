@@ -83,20 +83,13 @@ Training Response Selection Models
 
 ### Model Arguments
 
-##### BERT-Base
-
-| task_name              | data_dir                         | bert_pretrained       | bert_checkpoint_path                |
-| ---------------------- | -------------------------------- | --------------------- | ----------------------------------- |
-| ubuntu                 | data/ubuntu_corpus_v1            | bert-base-uncased     | bert-base-uncased-pytorch_model.bin |
-| douban<br />e-commerce | data/douban<br />data/e-commerce | bert-base-wwm-chinese | bert-base-wwm-chinese_model.bin     |
-
 ##### BERT-Post
 
-| task_name  | data_dir              | bert_pretrained     | bert_checkpoint_path                  |
-| ---------- | --------------------- | ------------------- | ------------------------------------- |
-| ubuntu     | data/ubuntu_corpus_v1 | bert-post-uncased   | bert-post-uncased-pytorch_model.pth   |
-| douban     | data/douban           | bert-post-douban    | bert-post-douban-pytorch_model.pth    |
-| e-commerce | data/e-commerce       | bert-post-ecommerce | bert-post-ecommerce-pytorch_model.pth |
+| task_name  | data_dir              |  bert_checkpoint_path                  |
+| ---------- | --------------------- |  ------------------------------------- |
+| ubuntu     | ubuntu_data/ubuntu_post_train.pkl           | bert-post-uncased-pytorch_model.pth   |
+| douban     | douban_data/douban_post_train.pkl           | bert-post-douban-pytorch_model.pth    |
+| e-commerce | e_commerce_data/ubuntu_post_train.pkl       | bert-post-ecommerce-pytorch_model.pth |
 
 ##### ELECTRA-Base
 
