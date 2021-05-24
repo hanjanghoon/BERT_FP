@@ -83,20 +83,21 @@ Training Response Selection Models
 
 ### Model Arguments
 
-##### BERT-Post
+##### Fine-grained post-training
 
-| task_name  | data_dir              |  bert_checkpoint_path                  |
+| task_name  | data_dir              |  checkpoint_path                  |
 | ---------- | --------------------- |  ------------------------------------- |
-| ubuntu     | ubuntu_data/ubuntu_post_train.pkl           | bert-post-uncased-pytorch_model.pth   |
-| douban     | douban_data/douban_post_train.pkl           | bert-post-douban-pytorch_model.pth    |
-| e-commerce | e_commerce_data/ubuntu_post_train.pkl       | bert-post-ecommerce-pytorch_model.pth |
+| ubuntu     | ubuntu_data/ubuntu_post_train.pkl         | FPT/PT_checkpoint/ubuntu/bert.pt    |
+| douban     | douban_data/douban_post_train.pkl         | FPT/PT_checkpoint/douban/bert.pt    |
+| e-commerce | e_commerce_data/e_commerce_post_train.pkl | FPT/PT_checkpoint/e_commerce/bert.pt|
 
-##### ELECTRA-Base
+##### Fine-tuning
 
-| task_name              | data_dir                         | bert_pretrained      | bert_checkpoint_path                   |
-| ---------------------- | -------------------------------- | -------------------- | -------------------------------------- |
-| ubuntu                 | data/ubuntu_corpus_v1            | electra-base         | electra-base-pytorch_model.bin         |
-| douban<br />e-commerce | data/douban<br />data/e-commerce | electra-base-chinese | electra-base-chinese-pytorch_model.bin |
+| task_name  | data_dir              |  checkpoint_path                  |
+| ---------- | --------------------- |  ------------------------------------- |
+| ubuntu     | ubuntu_data/ubuntu_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/ubuntu.0.pt    |
+| douban     | douban_data/douban_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/douban.0.pt    |
+| e-commerce | e_commerce_data/e_commerce_dataset_1M.pkl | Fine-tuning/FT_checkpoint/e_commerce.0.pt|
 
 ##### ELECTRA-Post
 
