@@ -4,7 +4,7 @@ import torch.nn.utils as utils
 from torch.utils.data import DataLoader
 from Metrics import Metrics
 import logging
-from torch.utils.data import TensorDataset, RandomSampler
+from torch.utils.data import  RandomSampler
 from transformers import AdamW
 from transformers import BertConfig, BertForSequenceClassification, BertTokenizer
 from tqdm import tqdm
@@ -113,9 +113,9 @@ def convert_examples_to_features(item, train, bert_tokenizer):
 
     input_ids = [bert_tokenizer.cls_token_id] + context + [bert_tokenizer.sep_token_id] + response + [
         bert_tokenizer.sep_token_id]
-    segment_ids = [0] * (context_len + 2)  # 컨텍스트 다합친거.
-    segment_ids += [1] * (len(input_ids) - context_len - 2)  # #이건 리스폰스.
-    # 처음 1~context_len+1 전까지. contextlen+1에서 context_evi_len까지 context_evi len+1에서 끝 전까지.
+    segment_ids = [0] * (context_len + 2)  # context
+    segment_ids += [1] * (len(input_ids) - context_len - 2)  # #response
+    
     lenidx = [1 + context_len, len(input_ids) - 1]
 
     input_mask = [1] * len(input_ids)
@@ -126,14 +126,8 @@ def convert_examples_to_features(item, train, bert_tokenizer):
     if (padding_length > 0):
         input_ids = input_ids + ([0] * padding_length)
         input_mask = input_mask + ([0] * padding_length)
-        segment_ids = segment_ids + ([0] * padding_length)  # 패딩은 0이다.
+        segment_ids = segment_ids + ([0] * padding_length) 
 
-    #          assert len(input_ids) == 256
-    #         assert len(input_mask) == 256
-    #        assert len(segment_ids) == 256
-
-    # label_id=y_train[ex_index]
-    # label_id = label_map[example.label]
     features = InputFeatures(input_ids=input_ids,
                              input_mask=input_mask,
                              segment_ids=segment_ids,
@@ -161,16 +155,14 @@ class NeuralNetwork(nn.Module):
         special_tokens_dict = {'eos_token': '[eos]'}
         num_added_toks = self.bert_tokenizer.add_special_tokens(special_tokens_dict)
         self.bert_model = model_class.from_pretrained(FT_model[args.task],config=self.bert_config)
-
-        #self.bert_model.bert.load_state_dict(state_dict=torch.load("../Ablation/MLM_NSP_check/checkpoint5-5000/bert.pt"))
-        #self.bert_model.bert.load_state_dict(state_dict=torch.load("../Ablation/NSP_ST/checkpoint20-1011420/bert.pt"))
+        
 
         self.bert_model.resize_token_embeddings(len(self.bert_tokenizer))
-        #checkpoint PT
-        #self.bert_model.bert.load_state_dict(state_dict=torch.load("../Ablation/NSP_SCR/checkpoint20-1637300/bert.pt"))
-        #self.bert_model.bert.load_state_dict(state_dict=torch.load("../SPT/check/checkpoint28-151713/bert.pt"))
-        #self.bert_model.bert.load_state_dict(state_dict=torch.load("../Ablation/SOP_SCR/checkpoint20-1637300/bert.pt"))
-        #self.bert_model.bert.load_state_dict(state_dict=torch.load("../FPT/check/douban27/bert.pt"))
+        """You can load the post-trained checkpoint here."""
+        self.bert_model.bert.load_state_dict(state_dict=torch.load("./FPT/PT_checkpoint/ubuntu25/bert.pt"))
+        #self.bert_model.bert.load_state_dict(state_dict=torch.load("./FPT/PT_checkpoint/douban27/bert.pt"))
+        #self.bert_model.bert.load_state_dict(state_dict=torch.load("./FPT/PT_checkpoint/e_commerce34/bert.pt"))
+        
         self.bert_model = self.bert_model.cuda()
 
     def forward(self):
@@ -191,7 +183,7 @@ class NeuralNetwork(nn.Module):
         self.optimizer.step()
         if i % 100 == 0:
             print('Batch[{}] - loss: {:.6f}  batch_size:{}'.format(i, loss.item(),
-                                                                   batch_y.size(0)))  # , accuracy, corrects
+                                                                   batch_y.size(0)))  
         return loss
 
     def fit(self, train, dev):  

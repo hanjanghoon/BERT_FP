@@ -1,41 +1,33 @@
 import time
 import argparse
 import pickle
-import torch
-from torch.utils.data import TensorDataset
 import os
-from transformers import WEIGHTS_NAME, BertConfig, BertForSequenceClassification, BertTokenizer
 from BERT_finetuning import NeuralNetwork
 from setproctitle import setproctitle
 
 setproctitle('BERT_FP')
 
-MODEL_CLASSES = {
-    'bert': (BertConfig, BertForSequenceClassification, BertTokenizer)
-}
-
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
+#Dataset path.
 FT_data={
-    'ubuntu': '../ubuntu_data/ubuntu_dataset_1M.pkl',
-    'douban': '../douban_data/douban_dataset_1M.pkl',
-    'e_commerce': '../e_commerce_data/e_commerce_dataset_1M.pkl'
+    'ubuntu': 'ubuntu_data/ubuntu_dataset_1M.pkl',
+    'douban': 'douban_data/douban_dataset_1M.pkl',
+    'e_commerce': 'e_commerce_data/e_commerce_dataset_1M.pkl'
 }
-
+print(os.getcwd())
 ## Required parameters
 parser = argparse.ArgumentParser()
 parser.add_argument("--task",
                     default='ubuntu',
                     type=str,
                     help="The dataset used for training and test.")
+
 parser.add_argument("--is_training",
-                    default=False,
-                    type=bool,
-                    help="Training model or evaluating model?")
-parser.add_argument("--max_utterances",
-                    default=10,
-                    type=int,
-                    help="The maximum number of utterances.")
+                    action='store_true',
+                    help="Training model or testing model?")
+
 parser.add_argument("--batch_size",
                     default=32,
                     type=int,
@@ -43,25 +35,19 @@ parser.add_argument("--batch_size",
 parser.add_argument("--learning_rate",
                     default=1e-5,
                     type=float,
-                    help="The initial learning rate for Adam.")
-parser.add_argument("--l2_reg",
-                    default=0.0,
-                    type=float,
-                    help="The l2 regularization.")
+                    help="The initial learning rate for Adamw.")
 parser.add_argument("--epochs",
-                    default=1,
+                    default=2,
                     type=float,
                     help="Total number of training epochs to perform.")
 parser.add_argument("--save_path",
-                    default="./FT_checkpoint/",
+                    default="./Fine-Tuning/FT_checkpoint/",
                     type=str,
                     help="The path to save model.")
 parser.add_argument("--score_file_path",
-                    default="sopscr.txt",
+                    default="./Fine-Tuning/scorefile.txt",
                     type=str,
                     help="The path to save model.")
-parser.add_argument("--cache_dir", default="bert_cache", type=str,
-                    help="Where do you want to store the pre-trained models downloaded from s3")
 parser.add_argument("--do_lower_case", action='store_true', default=True,
                     help="Set this flag if you are using an uncased model.")
 args = parser.parse_args()

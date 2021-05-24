@@ -1,13 +1,13 @@
 import numpy as np
 np.random.seed(0)
-
+#This code based on https://github.com/chunyuanY/Dialogue metric
 
 class Metrics(object):
 
     def __init__(self, score_file_path:str):
         super(Metrics, self).__init__()
         self.score_file_path = score_file_path
-        self.segment = 10
+        self.segment = 10 #It depend on positive negative ratio 1:1 or 1:10
 
     def __read_socre_file(self, score_file_path):
         sessions = []
@@ -49,16 +49,13 @@ class Metrics(object):
             return 0
 
     def __recall_at_position_k_in_10(self, sort_data, k):
-        sort_label = [s_d[1] for s_d in sort_data]#답.
-        select_label = sort_label[:k]#답하나.
-        return 1.0 * select_label.count(1) / sort_label.count(1)#10개중에 답이 하나라도 있으면됨.
+        sort_label = [s_d[1] for s_d in sort_data]
+        select_label = sort_label[:k]
+        return 1.0 * select_label.count(1) / sort_label.count(1)
 
 
     def evaluation_one_session(self, data):
-        '''
-        :param data: one conversion session, which layout is [(score1, label1), (score2, label2), ..., (score10, label10)].
-        :return: all kinds of metrics used in paper.
-        '''
+        
         np.random.shuffle(data)
         sort_data = sorted(data, key=lambda x: x[0], reverse=True)
         m_a_p = self.__mean_average_precision(sort_data)
