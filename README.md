@@ -33,18 +33,16 @@ We provide following post-trained and fine-tuned checkpoints.
 
 
 ### Data pkls for Fine-tuning (Response Selection)
-We used reconstructed following datasets
+We used the following data for post-training and fine-tuning
 - [fine-grained post-training dataset and fine-tuning dataset for 3 benchmarks (ubuntu, douban, e-commerce)][5]
 
 
-Original version for each dataset is availble in [Ubuntu Corpus V1][3], [Douban Corpus][4], and [E-Commerce Corpus][5], respectively.
+Original version for each dataset is availble in [Ubuntu Corpus V1][6], [Douban Corpus][7], and [E-Commerce Corpus][8], respectively.
 
 
 
 Fine-grained Post-Training
 --------
-
-### Post-training Creation
 
 ##### Data for post-training BERT
 
@@ -174,6 +172,10 @@ We provide model checkpoints of UMS-BERT+, which obtained new state-of-the-art, 
 [3]: https://drive.google.com/file/d/1-4E0eEjyp7n_F75TEh7OKrpYPK4GLNoE/view?usp=sharing
 [4]: https://drive.google.com/file/d/1n2zigNDiIArWtsiV9iUQLwfSBgtNn7ws/view?usp=sharing
 [5]: https://drive.google.com/file/d/16Rv8rSRneq7gfPRkpFZseNYfswuoqI4-/view?usp=sharing
+[6]: https://www.dropbox.com/s/2fdn26rj6h9bpvl/ubuntu_data.zip
+[7]: https://github.com/MarkWuNLP/MultiTurnResponseSelection
+[8]: https://github.com/cooelf/DeepUtteranceAggregation
+
 [6]: https://github.com/ymcui/Chinese-BERT-wwm
 [7]: https://github.com/ymcui/Chinese-ELECTRA
 [8]:https://drive.google.com/file/d/14jxet4niR7o_kml8Wp77kFh24C9rVAPT/
