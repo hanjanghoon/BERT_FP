@@ -24,7 +24,7 @@ pip install -r requirements.txt
 Preparing Data and Checkpoints
 -------------
 
-### Pre- and Post-trained Checkpoints
+### Post-trained and fine-tuned Checkpoints
 
 We provide following post-trained and fine-tuned checkpoints. 
 
@@ -32,20 +32,12 @@ We provide following post-trained and fine-tuned checkpoints.
 - [fine-tuned checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][4]
 
 
-### Data pkls for Fine-tuning (Response Selection)
+### Data pkl for Fine-tuning (Response Selection)
 We used the following data for post-training and fine-tuning
 - [fine-grained post-training dataset and fine-tuning dataset for 3 benchmarks (ubuntu, douban, e-commerce)][5]
 
 
 Original version for each dataset is availble in [Ubuntu Corpus V1][6], [Douban Corpus][7], and [E-Commerce Corpus][8], respectively.
-```shell
-#Ubuntu Corpus V1
-sh scripts/create_bert_post_data_creation_ubuntu.sh
-#Douban Corpus
-sh scripts/create_bert_post_data_creation_douban.sh
-#E-commerce Corpus
-sh scripts/create_bert_post_data_creation_e-commerce.sh
-```
 
 
 Fine-grained Post-Training
@@ -72,12 +64,18 @@ python -u FPT/e_commmerce_final.py --num_train_epochs 20
 
 ##### Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
 
+###### Taining 
 ```shell
 python -u Fine-tuing/Response_selection.py --task ubuntu --is_training
 python -u Fine-tuing/Response_selection.py --task douban --is_training
 python -u Fine-tuing/Response_selection.py --task e_commerce --is_training
 ```
-
+###### Testing
+```shell
+python -u Fine-tuing/Response_selection.py --task ubuntu
+python -u Fine-tuing/Response_selection.py --task douban 
+python -u Fine-tuing/Response_selection.py --task e_commerce
+```
 
 
 Training Response Selection Models
