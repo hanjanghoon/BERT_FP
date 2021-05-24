@@ -38,7 +38,14 @@ We used the following data for post-training and fine-tuning
 
 
 Original version for each dataset is availble in [Ubuntu Corpus V1][6], [Douban Corpus][7], and [E-Commerce Corpus][8], respectively.
-
+```shell
+#Ubuntu Corpus V1
+sh scripts/create_bert_post_data_creation_ubuntu.sh
+#Douban Corpus
+sh scripts/create_bert_post_data_creation_douban.sh
+#E-commerce Corpus
+sh scripts/create_bert_post_data_creation_e-commerce.sh
+```
 
 
 Fine-grained Post-Training
