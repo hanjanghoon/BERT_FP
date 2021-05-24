@@ -51,21 +51,10 @@ sh scripts/create_bert_post_data_creation_e-commerce.sh
 Fine-grained Post-Training
 --------
 
-##### Data for post-training BERT
+##### Making Data for post-training and fine-tuning  
 
-```shell
-#Ubuntu Corpus V1
-sh scripts/create_bert_post_data_creation_ubuntu.sh
-#Douban Corpus
-sh scripts/create_bert_post_data_creation_douban.sh
-#E-commerce Corpus
-sh scripts/create_bert_post_data_creation_e-commerce.sh
 ```
-
-##### Data for post-training ELECTRA 
-
-```shell
-sh scripts/download_electra_post_training_pkl.sh
+Data_processing.py
 ```
 
 
