@@ -109,15 +109,15 @@ We provide model checkpoints of UMS-BERT+, which obtained new state-of-the-art, 
 
 | Ubuntu         | R@1   | R@2   | R@5   |
 | -------------- | ----- | ----- | ----- |
-| [UMS-BERT+][8] | 0.875 | 0.942 | 0.988 |
+| [BERT_FP][8] | 0.911 | 0.962 | 0.994 |
 
 | Douban         | MAP   | MRR   | P@1   | R@1   | R@2   | R@5   |
 | -------------- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [UMS-BERT+][9] | 0.625 | 0.664 | 0.499 | 0.318 | 0.482 | 0.858 |
+| [BERT_FP][9] | 0.644 | 0.680 | 0.512 | 0.324 | 0.542 | 0.870 |
 
 | E-Commerce      | R@1   | R@2   | R@5   |
 | --------------- | ----- | ----- | ----- |
-| [UMS-BERT+][10] | 0.762 | 0.905 | 0.986 |
+| [BERT_FP][10] | 0.870 | 0.956 | 0.993 |
 
 
 
@@ -130,8 +130,3 @@ We provide model checkpoints of UMS-BERT+, which obtained new state-of-the-art, 
 [7]: https://github.com/MarkWuNLP/MultiTurnResponseSelection
 [8]: https://github.com/cooelf/DeepUtteranceAggregation
 
-[6]: https://github.com/ymcui/Chinese-BERT-wwm
-[7]: https://github.com/ymcui/Chinese-ELECTRA
-[8]:https://drive.google.com/file/d/14jxet4niR7o_kml8Wp77kFh24C9rVAPT/
-[9]:https://drive.google.com/file/d/1kPd3HpAAkEACZDUs1WZ_vkNAXVvnnzq7/
-[10]:https://drive.google.com/file/d/15k69AtGjwfB81_qP2K7xL2CdcgWvuz0I/
