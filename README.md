@@ -33,15 +33,15 @@ We provide following post-trained and fine-tuned checkpoints.
 
 
 ### Data pkls for Fine-tuning (Response Selection)
-We used folling datasets
-- [fine-grained post-trained data (pkl) for 3 benchmark datasets (ubuntu, douban, e-commerce)][5]
+We used reconstructed following datasets
+- [fine-grained post-training dataset and fine-tuning dataset for 3 benchmarks (ubuntu, douban, e-commerce)][5]
 
 
 Original version for each dataset is availble in [Ubuntu Corpus V1][3], [Douban Corpus][4], and [E-Commerce Corpus][5], respectively.
 
 
 
-Domain-specific Post-Training
+Fine-grained Post-Training
 --------
 
 ### Post-training Creation
