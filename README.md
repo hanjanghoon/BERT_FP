@@ -94,8 +94,8 @@ Training Response Selection Models
 
 ##### Fine-tuning
 
-| task_name  | data_dir              |  checkpoint_path                            |
-| ---------- | --------------------- |  ------------------------------------------ |
+| task_name  | data_dir              |  checkpoint_path                                     |
+| ---------- | --------------------- |  --------------------------------------------------- |
 | ubuntu     | ubuntu_data/ubuntu_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/ubuntu.0.pt    |
 | douban     | douban_data/douban_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/douban.0.pt    |
 | e-commerce | e_commerce_data/e_commerce_dataset_1M.pkl | Fine-tuning/FT_checkpoint/e_commerce.0.pt|
