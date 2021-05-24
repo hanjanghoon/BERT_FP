@@ -5,7 +5,7 @@ Implements the model described in the following paper [Fine-grained Post-trainin
 
 ```
 ```
-This code is reimplemented as a fork of [huggingface/transformers][1].
+This code is reimplemented as a fork of [huggingface/transformers][2].
 
 ![alt text](ums_overview.png)
 
@@ -28,20 +28,16 @@ Preparing Data and Checkpoints
 
 We provide following post-trained and fine-tuned checkpoints. 
 
-- [fine-grained post-trained checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][1]
-- [fine-tuned checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][1]
+- [fine-grained post-trained checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][3]
+- [fine-tuned checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][4]
 
-```shell
-sh scripts/download_pretrained_checkpoints.sh
-```
 
 ### Data pkls for Fine-tuning (Response Selection)
+We used folling datasets
+- [fine-grained post-trained data (pkl) for 3 benchmark datasets (ubuntu, douban, e-commerce)][5]
+
 
 Original version for each dataset is availble in [Ubuntu Corpus V1][3], [Douban Corpus][4], and [E-Commerce Corpus][5], respectively.
-
-``` shell
-sh scripts/download_datasets.sh
-```
 
 
 
@@ -175,9 +171,9 @@ We provide model checkpoints of UMS-BERT+, which obtained new state-of-the-art, 
 
 [1]: https://github.com/huggingface/transformers
 [2]: https://github.com/taesunwhang/BERT-ResSel
-[3]: https://www.dropbox.com/s/2fdn26rj6h9bpvl/ubuntu_data.zip
-[4]: https://github.com/MarkWuNLP/MultiTurnResponseSelection
-[5]: https://github.com/cooelf/DeepUtteranceAggregation
+[3]: https://drive.google.com/file/d/1-4E0eEjyp7n_F75TEh7OKrpYPK4GLNoE/view?usp=sharing
+[4]: https://drive.google.com/file/d/1n2zigNDiIArWtsiV9iUQLwfSBgtNn7ws/view?usp=sharing
+[5]: https://drive.google.com/file/d/16Rv8rSRneq7gfPRkpFZseNYfswuoqI4-/view?usp=sharing
 [6]: https://github.com/ymcui/Chinese-BERT-wwm
 [7]: https://github.com/ymcui/Chinese-ELECTRA
 [8]:https://drive.google.com/file/d/14jxet4niR7o_kml8Wp77kFh24C9rVAPT/
