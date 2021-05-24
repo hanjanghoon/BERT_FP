@@ -55,9 +55,9 @@ Data_processing.py
 ##### Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
 
 ```shell
-python -u FPT/ubuntu_final.py --num_train_epochs 20
-python -u FPT/douban_final.py --num_train_epochs 20
-python -u FPT/e_commmerce_final.py --num_train_epochs 20
+python -u FPT/ubuntu_final.py --num_train_epochs 25
+python -u FPT/douban_final.py --num_train_epochs 27
+python -u FPT/e_commmerce_final.py --num_train_epochs 34
 ```
 
 ### Fine-tuning Examples
