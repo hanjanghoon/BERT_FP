@@ -69,19 +69,24 @@ sh scripts/download_electra_post_training_pkl.sh
 ```
 
 
-
 ### Post-training Examples
 
-##### BERT+ (e.g., Ubuntu Corpus V1)
+##### Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
 
 ```shell
-python3 main.py --model bert_post_training --task_name ubuntu --data_dir data/ubuntu_corpus_v1 --bert_pretrained bert-base-uncased --bert_checkpoint_path bert-base-uncased-pytorch_model.bin --task_type response_selection --gpu_ids "0" --root_dir /path/to/root_dir --training_type post_training
+python -u FPT/ubuntu_final.py --num_train_epochs 20
+python -u FPT/douban_final.py --num_train_epochs 20
+python -u FPT/e_commmerce_final.py --num_train_epochs 20
 ```
 
-##### ELECTRA+ (e.g., Douban Corpus)
+### Fine-tuning Examples
+
+##### Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
 
 ```shell
-python3 main.py --model electra_post_training --task_name douban --data_dir data/electra_post_training --bert_pretrained electra-base-chinese --bert_checkpoint_path electra-base-chinese-pytorch_model.bin --task_type response_selection --gpu_ids "0" --root_dir /path/to/root_dir --training_type post_training
+python -u Fine-tuing/Response_selection.py --task ubuntu --is_training
+python -u Fine-tuing/Response_selection.py --task douban --is_training
+python -u Fine-tuing/Response_selection.py --task e_commerce --is_training
 ```
 
 
