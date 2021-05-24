@@ -105,7 +105,7 @@ Training Response Selection Models
 Performance
 ----------
 
-We provide model checkpoints of UMS-BERT+, which obtained new state-of-the-art, for each dataset.
+We provide model checkpoints of BERT_FP, which obtained new state-of-the-art, for each dataset.
 
 | Ubuntu         | R@1   | R@2   | R@5   |
 | -------------- | ----- | ----- | ----- |
@@ -115,9 +115,9 @@ We provide model checkpoints of UMS-BERT+, which obtained new state-of-the-art, 
 | -------------- | ----- | ----- | ----- | ----- | ----- | ----- |
 | [BERT_FP][9] | 0.644 | 0.680 | 0.512 | 0.324 | 0.542 | 0.870 |
 
-| E-Commerce      | R@1   | R@2   | R@5   |
-| --------------- | ----- | ----- | ----- |
-| [BERT_FP][10] | 0.870 | 0.956 | 0.993 |
+| E-Commerce          | R@1   | R@2   | R@5   |
+| ------------------- | ----- | ----- | ----- |
+| [BERT_FP][10]       | 0.870 | 0.956 | 0.993 |
 
 
 
