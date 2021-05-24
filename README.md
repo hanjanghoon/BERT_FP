@@ -66,6 +66,7 @@ python -u FPT/e_commmerce_final.py --num_train_epochs 34
 
 ###### Taining 
 ```shell
+To train the model, set `--is_training`
 python -u Fine-tuing/Response_selection.py --task ubuntu --is_training
 python -u Fine-tuing/Response_selection.py --task douban --is_training
 python -u Fine-tuing/Response_selection.py --task e_commerce --is_training
@@ -98,46 +99,6 @@ Training Response Selection Models
 | ubuntu     | ubuntu_data/ubuntu_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/ubuntu.0.pt    |
 | douban     | douban_data/douban_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/douban.0.pt    |
 | e-commerce | e_commerce_data/e_commerce_dataset_1M.pkl | Fine-tuning/FT_checkpoint/e_commerce.0.pt|
-
-##### ELECTRA-Post
-
-| task_name  | data_dir              | bert_pretrained        | bert_checkpoint_path                     |
-| ---------- | --------------------- | ---------------------- | ---------------------------------------- |
-| ubuntu     | data/ubuntu_corpus_v1 | electra-post           | electra-post-pytorch_model.pth           |
-| douban     | data/douban           | electra-post-douban    | electra-post-douban-pytorch_model.pth    |
-| e-commerce | data/e-commerce       | electra-post-ecommerce | electra-post-ecommerce-pytorch_model.pth |
-
-
-
-### Fine-tuning Examples
-
-##### BERT+ (e.g., Ubuntu Corpus V1)
-
-```shell
-python3 main.py --model bert_post --task_name ubuntu --data_dir data/ubuntu_corpus_v1 --bert_pretrained bert-post-uncased --bert_checkpoint_path bert-post-uncased-pytorch_model.pth --task_type response_selection --gpu_ids "0" --root_dir /path/to/root_dir
-```
-
-##### UMS BERT+ (e.g., Douban Corpus)
-
-```shell
-python3 main.py --model bert_post --task_name douban --data_dir data/douban --bert_pretrained bert-post-douban --bert_checkpoint_path bert-post-douban-pytorch_model.pth --task_type response_selection --gpu_ids "0" --root_dir /path/to/root_dir --multi_task_type "ins,del,srch"
-```
-
-##### UMS ELECTRA (e.g., E-Commerce)
-
-```shell
-python3 main.py --model electra_base --task_name e-commerce --data_dir data/e-commerce --bert_pretrained electra-base-chinese --bert_checkpoint_path electra-base-chinese-pytorch_model.bin --task_type response_selection --gpu_ids "0" --root_dir /path/to/root_dir --multi_task_type "ins,del,srch"
-```
-
-Evaluation
-----------
-To evaluate the model, set `--evaluate` to `/path/to/checkpoints` 
-
-##### UMS BERT+ (e.g., Ubuntu Corpus V1)
-
-```shell
-python3 main.py --model bert_post --task_name ubuntu --data_dir data/ubuntu_corpus_v1 --bert_pretrained bert-post-uncased --bert_checkpoint_path bert-post-uncased-pytorch_model.pth --task_type response_selection --gpu_ids "0" --root_dir /path/to/root_dir --evaluate /path/to/checkpoints --multi_task_type "ins,del,srch"
-```
 
 
 
