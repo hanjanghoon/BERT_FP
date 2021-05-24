@@ -52,7 +52,7 @@ Data_processing.py
 
 ### Post-training Examples
 
-##### Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
+##### (Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
 
 ```shell
 python -u FPT/ubuntu_final.py --num_train_epochs 25
@@ -62,7 +62,7 @@ python -u FPT/e_commmerce_final.py --num_train_epochs 34
 
 ### Fine-tuning Examples
 
-##### Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
+##### (Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
 
 ###### Taining 
 ```shell
