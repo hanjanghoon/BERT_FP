@@ -86,16 +86,16 @@ Training Response Selection Models
 
 ##### Fine-grained post-training
 
-| task_name  | data_dir              |  checkpoint_path                  |
-| ---------- | --------------------- |  ------------------------------------- |
+| task_name  | data_dir                                  |  checkpoint_path                    |
+| ---------- | ---------------------                     |  -----------------------------------|
 | ubuntu     | ubuntu_data/ubuntu_post_train.pkl         | FPT/PT_checkpoint/ubuntu/bert.pt    |
 | douban     | douban_data/douban_post_train.pkl         | FPT/PT_checkpoint/douban/bert.pt    |
 | e-commerce | e_commerce_data/e_commerce_post_train.pkl | FPT/PT_checkpoint/e_commerce/bert.pt|
 
 ##### Fine-tuning
 
-| task_name  | data_dir              |  checkpoint_path                                     |
-| ---------- | --------------------- |  --------------------------------------------------- |
+| task_name  | data_dir                                  |  checkpoint_path                         |
+| ---------- | ---------------------                     |  ----------------------------------------|
 | ubuntu     | ubuntu_data/ubuntu_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/ubuntu.0.pt    |
 | douban     | douban_data/douban_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/douban.0.pt    |
 | e-commerce | e_commerce_data/e_commerce_dataset_1M.pkl | Fine-tuning/FT_checkpoint/e_commerce.0.pt|
@@ -115,9 +115,9 @@ We provide model checkpoints of BERT_FP, which obtained new state-of-the-art, fo
 | -------------- | ----- | ----- | ----- | ----- | ----- | ----- |
 | [BERT_FP]      | 0.644 | 0.680 | 0.512 | 0.324 | 0.542 | 0.870 |
 
-| E-Commerce          | R@1   | R@2   | R@5   |
-| ------------------- | ----- | ----- | ----- |
-| [BERT_FP]           | 0.870 | 0.956 | 0.993 |
+| E-Commerce     | R@1   | R@2   | R@5   |
+| -------------- | ----- | ----- | ----- |
+| [BERT_FP]      | 0.870 | 0.956 | 0.993 |
 
 
 
