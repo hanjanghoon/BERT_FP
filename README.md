@@ -4,6 +4,21 @@ Fine-grained Post-training for Multi-turn Response Selection <img src="https://p
 Implements the model described in the following paper [Fine-grained Post-training for Improving Retrieval-based Dialogue Systems] in NAACL-2021.
 
 ```
+@inproceedings{han-etal-2021-fine,
+    title = "Fine-grained Post-training for Improving Retrieval-based Dialogue Systems",
+    author = "Han, Janghoon  and
+      Hong, Taesuk  and
+      Kim, Byoungjae  and
+      Ko, Youngjoong  and
+      Seo, Jungyun",
+    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2021.naacl-main.122",
+    pages = "1549--1558",
+}
 ```
 This code is reimplemented as a fork of [huggingface/transformers][2].
 
