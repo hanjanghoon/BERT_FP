@@ -6,11 +6,7 @@ Implements the model described in the following paper [Fine-grained Post-trainin
 ```
 @inproceedings{han-etal-2021-fine,
     title = "Fine-grained Post-training for Improving Retrieval-based Dialogue Systems",
-    author = "Han, Janghoon  and
-      Hong, Taesuk  and
-      Kim, Byoungjae  and
-      Ko, Youngjoong  and
-      Seo, Jungyun",
+    author = "Han, Janghoon  and Hong, Taesuk  and Kim, Byoungjae  and Ko, Youngjoong  and Seo, Jungyun",
     booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
     month = jun,
     year = "2021",
