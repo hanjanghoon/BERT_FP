@@ -3,7 +3,7 @@ Fine-grained Post-training for Multi-turn Response Selection <img src="https://p
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fine-grained-post-training-for-improving/conversational-response-selection-on-ubuntu-1)](https://paperswithcode.com/sota/conversational-response-selection-on-ubuntu-1?p=fine-grained-post-training-for-improving)
 
 
-Implements the model described in the following paper [Fine-grained Post-training for Improving Retrieval-based Dialogue Systems] in NAACL-2021.
+Implements the model described in the following paper [Fine-grained Post-training for Improving Retrieval-based Dialogue Systems](https://www.aclweb.org/anthology/2021.naacl-main.122/) in NAACL-2021.
 
 ```
 @inproceedings{han-etal-2021-fine,
@@ -135,6 +135,4 @@ We provide model checkpoints of BERT_FP, which obtained new state-of-the-art, fo
 [4]: https://drive.google.com/file/d/1n2zigNDiIArWtsiV9iUQLwfSBgtNn7ws/view?usp=sharing
 [5]: https://drive.google.com/file/d/16Rv8rSRneq7gfPRkpFZseNYfswuoqI4-/view?usp=sharing
 [6]: https://www.dropbox.com/s/2fdn26rj6h9bpvl/ubuntu_data.zip
-[7]: https://github.com/MarkWuNLP/MultiTurnResponseSelection
-[8]: https://github.com/cooelf/DeepUtteranceAggregation
 
