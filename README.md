@@ -135,4 +135,5 @@ We provide model checkpoints of BERT_FP, which obtained new state-of-the-art, fo
 [4]: https://drive.google.com/file/d/1n2zigNDiIArWtsiV9iUQLwfSBgtNn7ws/view?usp=sharing
 [5]: https://drive.google.com/file/d/16Rv8rSRneq7gfPRkpFZseNYfswuoqI4-/view?usp=sharing
 [6]: https://www.dropbox.com/s/2fdn26rj6h9bpvl/ubuntu_data.zip
-
+[7]: https://github.com/MarkWuNLP/MultiTurnResponseSelection
+[8]: https://github.com/cooelf/DeepUtteranceAggregation
