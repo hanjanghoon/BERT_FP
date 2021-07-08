@@ -75,15 +75,15 @@ python -u FPT/e_commmerce_final.py --num_train_epochs 34
 ###### Taining 
 ```shell
 To train the model, set `--is_training`
-python -u Fine-tuning/Response_selection.py --task ubuntu --is_training
-python -u Fine-tuning/Response_selection.py --task douban --is_training
-python -u Fine-tuning/Response_selection.py --task e_commerce --is_training
+python -u Fine-Tuning/Response_selection.py --task ubuntu --is_training
+python -u Fine-Tuning/Response_selection.py --task douban --is_training
+python -u Fine-Tuning/Response_selection.py --task e_commerce --is_training
 ```
 ###### Testing
 ```shell
-python -u Fine-tuning/Response_selection.py --task ubuntu
-python -u Fine-tuning/Response_selection.py --task douban 
-python -u Fine-tuning/Response_selection.py --task e_commerce
+python -u Fine-Tuning/Response_selection.py --task ubuntu
+python -u Fine-Tuning/Response_selection.py --task douban 
+python -u Fine-Tuning/Response_selection.py --task e_commerce
 ```
 
 
@@ -104,9 +104,9 @@ Training Response Selection Models
 
 | task_name     | data_dir                                  |  checkpoint_path                         |
 | ----------    | ---------------------                     |  ----------------------------------------|
-| ubuntu        | ubuntu_data/ubuntu_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/ubuntu.0.pt    |
-| douban        | douban_data/douban_dataset_1M.pkl         | Fine-tuning/FT_checkpoint/douban.0.pt    |
-| e-commerce    | e_commerce_data/e_commerce_dataset_1M.pkl | Fine-tuning/FT_checkpoint/e_commerce.0.pt|
+| ubuntu        | ubuntu_data/ubuntu_dataset_1M.pkl         | Fine-Tuning/FT_checkpoint/ubuntu.0.pt    |
+| douban        | douban_data/douban_dataset_1M.pkl         | Fine-Tuning/FT_checkpoint/douban.0.pt    |
+| e-commerce    | e_commerce_data/e_commerce_dataset_1M.pkl | Fine-Tuning/FT_checkpoint/e_commerce.0.pt|
 
 
 
