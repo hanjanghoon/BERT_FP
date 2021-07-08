@@ -75,15 +75,15 @@ python -u FPT/e_commmerce_final.py --num_train_epochs 34
 ###### Taining 
 ```shell
 To train the model, set `--is_training`
-python -u Fine-tuing/Response_selection.py --task ubuntu --is_training
-python -u Fine-tuing/Response_selection.py --task douban --is_training
-python -u Fine-tuing/Response_selection.py --task e_commerce --is_training
+python -u Fine-tuning/Response_selection.py --task ubuntu --is_training
+python -u Fine-tuning/Response_selection.py --task douban --is_training
+python -u Fine-tuning/Response_selection.py --task e_commerce --is_training
 ```
 ###### Testing
 ```shell
-python -u Fine-tuing/Response_selection.py --task ubuntu
-python -u Fine-tuing/Response_selection.py --task douban 
-python -u Fine-tuing/Response_selection.py --task e_commerce
+python -u Fine-tuning/Response_selection.py --task ubuntu
+python -u Fine-tuning/Response_selection.py --task douban 
+python -u Fine-tuning/Response_selection.py --task e_commerce
 ```
 
 
